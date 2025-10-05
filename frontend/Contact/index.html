@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact • Envion</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/contact.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="https://res.cloudinary.com/dssulxz6t/image/upload/v1759635409/env_k23rya.png" alt="Envion logo" class="nav-logo-img">
+        <a href="/">ENVION</a>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="/technology" class="nav-link">Technology</a></li>
+        <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="/services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="https://ai-blog-web-six.vercel.app/" target="_blank" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="page-content">
+    <section class="container contact-section">
+      <h1 class="page-title">Contact Us</h1><br>
+
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div class="contact-info">
+          <h2>Get in Touch</h2><br><br>
+          <p>We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+          <ul class="contact-options">
+            <li><span class="label">Email:</span> <a href="mailto:envion@energy.com">envion@energy.com</a></li>
+            <li><span class="label">Phone:</span> <a href="tel:+919847686068">+91 9847686068</a></li>
+            <li><span class="label">Phone:</span> <a href="tel:+919497638014">+91 9497638014</a></li>
+            <li><span class="label">Address:</span> Palakkad, Kerala, India</li>
+          </ul>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-field">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="from_name" placeholder="Enter your name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="reply_to" placeholder="you@example.com" required />
+            </div>
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="6" placeholder="Type your message..." required></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>ENVION</h3>
+        <p>Powering a sustainable future with innovative energy solutions.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/technology">Technology</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="https://ai-blog-web-six.vercel.app/" target="_blank">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <ul>
+          <li>Email: info@envion.energy</li>
+          <li>Phone: +91 9847686068</li>
+          <li>Phone: +91 9497638014</li>
+          <li>Address: Palakkad, Kerala, India</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Envion Tech. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/script.js"></script>
+  
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("H5vW--Td3tR92SvqH"); // 🔑 Replace with your Public Key
+    })();
+
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm("service_wgrl0sg", "template_qepbxv8", this)
+        .then(function() {
+          alert("✅ Message sent successfully!");
+        }, function(error) {
+          alert("❌ Failed to send message. " + JSON.stringify(error));
+        });
+    });
+  </script>
+</body>
+</html>
+

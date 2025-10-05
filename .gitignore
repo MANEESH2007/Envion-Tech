@@ -1,0 +1,7 @@
+node_modules/
+.env
+dist/
+build/
+frontend/assets/*.mp4
+*.mp4
+*.mov

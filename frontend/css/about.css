@@ -1,0 +1,103 @@
+/* About page styles */
+body {
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://res.cloudinary.com/dssulxz6t/image/upload/v1759635282/about_yz4kak.jpg') center/cover no-repeat fixed;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.page-hero {
+  height: 50vh;
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://res.cloudinary.com/dssulxz6t/image/upload/v1759635282/about_yz4kak.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Simple header (replaces hero) */
+.simple-page-header {
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://res.cloudinary.com/dssulxz6t/image/upload/v1759635282/about_yz4kak.jpg') center/cover no-repeat;
+  padding: 90px 0 0; /* clear fixed navbar, no extra bottom gap */
+  text-align: center;
+}
+.simple-page-header h1 { color: #fff; font-size: 2.4rem; margin: 0; }
+
+.page-hero-inner h1 { color: #fff; font-size: 3rem; margin-bottom: 0.5rem; }
+.page-hero-inner p { color: #ccc; max-width: 800px; }
+
+.page-content {
+  padding: 90px 0 80px; /* clear fixed navbar and keep consistent bottom space */
+  background: transparent;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; color: #ddd; }
+
+.page-title {
+  color: #fff;
+  text-align: center;
+  margin: 0 0 8px;
+  font-size: 2.2rem;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 2px;
+}
+.about-section { text-align: center; }
+.about-section h2 { color: #fff; margin: 1.5rem 0 0.75rem; font-size: 2rem; }
+.about-section h2:first-child { margin-top: 0.25rem; }
+.about-section p { color: #bbb; line-height: 1.9; margin-bottom: 1rem; max-width: 900px; margin-left: auto; margin-right: auto; }
+
+/* Team section */
+.team-section {
+  background: transparent;
+  padding: 40px 0 80px;
+}
+.team-section h2 { color: #fff; margin-bottom: 0.75rem; font-size: 2rem; text-align: center; }
+.team-intro { color: #aaa; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; text-align: center; }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.team-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(0,0,0,0.45); }
+
+.team-photo {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.team-card h3 { color: #fff; margin: 0.25rem 0; font-size: 1.1rem; }
+.team-card p { color: #b3c1cf; font-size: 0.95rem; }
+
+@media (max-width: 992px) {
+  .team-grid { 
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-hero { height: 42vh; }
+  .page-hero-inner h1 { font-size: 2.2rem; }
+  .team-grid { 
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+}
