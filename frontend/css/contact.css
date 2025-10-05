@@ -1,6 +1,6 @@
 /* Contact page styles */
 body {
-  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://res.cloudinary.com/dssulxz6t/image/upload/v1759635402/contact_drp7y9.jpg') center/cover no-repeat fixed;
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('../assets/contact.jpg') center/cover no-repeat fixed;
   background-attachment: fixed;
   min-height: 100vh;
 }

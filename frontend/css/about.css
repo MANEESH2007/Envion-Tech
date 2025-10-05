@@ -1,13 +1,13 @@
 /* About page styles */
 body {
-  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://res.cloudinary.com/dssulxz6t/image/upload/v1759635282/about_yz4kak.jpg') center/cover no-repeat fixed;
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('../assets/about.jpg') center/cover no-repeat fixed;
   background-attachment: fixed;
   min-height: 100vh;
 }
 
 .page-hero {
   height: 50vh;
-  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://res.cloudinary.com/dssulxz6t/image/upload/v1759635282/about_yz4kak.jpg') center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('../assets/about.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,7 +16,7 @@ body {
 
 /* Simple header (replaces hero) */
 .simple-page-header {
-  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://res.cloudinary.com/dssulxz6t/image/upload/v1759635282/about_yz4kak.jpg') center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('../assets/about.jpg') center/cover no-repeat;
   padding: 90px 0 0; /* clear fixed navbar, no extra bottom gap */
   text-align: center;
 }

@@ -20,13 +20,13 @@
 }
 /* Technology page styles */
 body {
-  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://res.cloudinary.com/dssulxz6t/image/upload/v1759635283/technology_stmuxv.jpg') center/cover no-repeat fixed;
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('../assets/technology.jpg') center/cover no-repeat fixed;
   background-attachment: fixed;
 }
 
 .page-hero {
   height: 50vh;
-  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://res.cloudinary.com/dssulxz6t/image/upload/v1759635283/technology_stmuxv.jpg') center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('../assets/technology.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
