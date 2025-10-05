@@ -237,16 +237,6 @@ html::-webkit-scrollbar {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    body {
-        background-color: #000 !important; /* Force black background on tablet */
-        background: #000 !important;
-    }
-    
-    html {
-        background-color: #000 !important; /* Force black background on tablet */
-        background: #000 !important;
-    }
-    
     .hamburger {
         display: flex;
     }
@@ -288,16 +278,6 @@ html::-webkit-scrollbar {
 }
 
 @media (max-width: 480px) {
-    body {
-        background-color: #000 !important; /* Force black background on mobile */
-        background: #000 !important;
-    }
-    
-    html {
-        background-color: #000 !important; /* Force black background on mobile */
-        background: #000 !important;
-    }
-    
     .nav-container {
         padding: 0 1rem;
     }
@@ -1565,7 +1545,7 @@ html::-webkit-scrollbar {
     left: -2rem;
     right: -2rem;
     height: 3px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+    background: transparent;
     border-radius: 2px;
     z-index: 1;
     width: 0;
@@ -1573,7 +1553,7 @@ html::-webkit-scrollbar {
 }
 
 .timeline-container.initial-animation .timeline-line {
-    width: calc(100% + 4rem);
+    width: 0;
 }
 
 .timeline-milestone {
@@ -1590,8 +1570,8 @@ html::-webkit-scrollbar {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 0.5);
-    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    background: transparent;
     transition: all 0.5s ease;
     position: relative;
     z-index: 3;
@@ -1612,7 +1592,7 @@ html::-webkit-scrollbar {
     left: 50%;
     width: 8px;
     height: 8px;
-    background: white;
+    background: transparent;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -1620,14 +1600,14 @@ html::-webkit-scrollbar {
 }
 
 .milestone-dot.active {
-    background: linear-gradient(135deg, #3498db, #2980b9);
-    border-color: #3498db;
-    box-shadow: 0 0 20px rgba(52, 152, 219, 0.6), 0 0 40px rgba(52, 152, 219, 0.3);
-    animation: pulse 2s infinite;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    animation: none;
 }
 
 .milestone-dot.active::before {
-    opacity: 1;
+    opacity: 0;
 }
 
 @keyframes pulse {
@@ -1764,6 +1744,18 @@ html::-webkit-scrollbar {
         background-color: transparent;
     }
     
+    /* Remove all dot visuals on mobile */
+    .milestone-dot {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .milestone-dot::before {
+        background: transparent !important;
+        opacity: 0 !important;
+    }
+    
     .global-reach-title {
         font-size: 2.5rem;
     }
@@ -1783,13 +1775,13 @@ html::-webkit-scrollbar {
         right: auto;
         width: 3px;
         height: 0;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+        background: transparent;
         transform: translateX(-50%);
         transition: height 2s ease-out;
     }
     
     .timeline-container.initial-animation .timeline-line {
-        height: 100%;
+        height: 0;
     }
     
     @keyframes drawLineVertical {
@@ -1802,7 +1794,7 @@ html::-webkit-scrollbar {
     }
     
     .timeline-container.initial-animation .timeline-line {
-        animation: drawLineVertical 2s ease-out 0.5s forwards;
+        animation: none;
     }
     
     .timeline-milestone {
@@ -1871,6 +1863,18 @@ html::-webkit-scrollbar {
     
     .milestone-content {
         background-color: transparent;
+    }
+    
+    /* Remove all dot visuals on small mobile */
+    .milestone-dot {
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    .milestone-dot::before {
+        background: transparent !important;
+        opacity: 0 !important;
     }
     
     .global-reach-title {
